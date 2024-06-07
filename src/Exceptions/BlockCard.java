@@ -1,6 +1,6 @@
 package Exceptions;
 
-public class BlockCard extends Exception{
+public class BlockCard extends AtmExceptions{
     public BlockCard() {
         super("card is blocked");
     }

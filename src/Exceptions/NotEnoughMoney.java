@@ -1,6 +1,6 @@
 package Exceptions;
 
-public class NotEnoughMoney extends Exception{
+public class NotEnoughMoney extends AtmExceptions{
     public NotEnoughMoney() {
         super("You dont have enough money");
     }

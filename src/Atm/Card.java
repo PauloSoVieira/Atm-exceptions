@@ -1,5 +1,6 @@
 package Atm;
 
+import Exceptions.AtmExceptions;
 import Exceptions.BlockCard;
 import Exceptions.NotEnoughMoney;
 import Exceptions.PinNumberIsWrongException;
@@ -16,7 +17,7 @@ public class Card {
         this.bankBalance= bankBalance;
     }
 
-    public boolean checkPinNumber(int pin) throws Exception {
+    public boolean checkPinNumber(int pin) throws AtmExceptions {
         if (pin != pinNumber){
             tryPinNumberCount++;
 

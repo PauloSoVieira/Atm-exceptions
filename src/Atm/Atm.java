@@ -1,17 +1,18 @@
 package Atm;
 
+import Exceptions.AtmExceptions;
 import Exceptions.BlockCard;
 import Exceptions.NotEnoughMoney;
 import Exceptions.PinNumberIsWrongException;
 
-public class Multibanco {
+public class Atm {
 
 
     private int balance;
 
 
 
-    public Multibanco(int balance) {
+    public Atm(int balance) {
         this.balance=balance;
 
     }
@@ -21,9 +22,9 @@ public class Multibanco {
     }
 
 
-public void moneyAvailabe(int amount) throws NotEnoughMoneyOnMultibanco {
+public void moneyAvailabe(int amount) throws NotEnoughMoneyOnAtm {
         if (balance - amount <0){
-            throw new NotEnoughMoneyOnMultibanco();
+            throw new NotEnoughMoneyOnAtm();
         }
 }
 
@@ -32,20 +33,20 @@ public void moneyAvailabe(int amount) throws NotEnoughMoneyOnMultibanco {
             card.checkPinNumber(pinNumber);
             moneyAvailabe(amount);
             card.withdraw(amount);
-        } catch (PinNumberIsWrongException e) {
+        } catch (AtmExceptions e) {
             System.out.println(e.getMessage());
-        }catch (BlockCard e) {
+      /*  }catch (BlockCard e) {
             System.out.println(e.getMessage());
         } catch(NotEnoughMoney e) {
             System.out.println(e.getMessage());
         }
-        catch(NotEnoughMoneyOnMultibanco e) {
+        catch(NotEnoughMoneyOnAtm e) {
             System.out.println(e.getMessage());
         }
         catch (Exception e) {
             System.out.println(e.getMessage());
+        }*/
+
         }
 
-    }
-
-}
+    }}
