@@ -5,7 +5,7 @@ import Exceptions.PinNumberIsWrongException;
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-    public static void main(String[] args) throws MyException, PinNumberIsWrongException {
+    public static void main(String[] args) throws  PinNumberIsWrongException {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
        Atm atm = new Atm(10000);
